@@ -200,4 +200,8 @@ input:focus:invalid {
     display: flex;
     margin-left: 3rem;
   }
+
+  .main__h2 {
+    font-size: 2.5rem;
+  }
 }
