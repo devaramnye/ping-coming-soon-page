@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css" />
+  <!--FONTS GOOGLE-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" 
+    rel="stylesheet"
+  />
+  <script src="https://kit.fontawesome.com/5ada82d516.js" crossorigin="anonymous"></script>
   
   <title>Frontend Mentor | Ping coming soon page</title>
 
@@ -15,20 +24,55 @@
   </style>
 </head>
 <body>
+  <header>
+    <h1 class="sr-only">PING<span class="dot">.</span></h1>
+    <fig>
+      <img class="header__img" src="./images/logo.svg" alt="PING. the name of the website and logo">
+    </fig>
+  </header>
 
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
+  <main>
+    <h2 class="main__h2">We are launching <span class="main__span">soon!</span></h2>
+    <p class="main__p">Subscribe and get notified</p>
+    <form id="form" novalidate>
+      <label for="mail">
+        Please enter an email address:
+      </label>
+      <div class="grid">
+        <input class="main__input" type="email" id="mail" name="mail" required minlength="8" placeholder="example@gmail.com" />
+        <p id="error"></p>
+        <button class="main__bttn" form="form">Notify Me</button>
+      </div>
+    </form>
+    <fig class="main__fig">
+      <img 
+        class="main__img" 
+        src="./images/illustration-dashboard.png" 
+        alt="our illustrated dashboard"
+      />
+    </fig>
+  </main>
 
   <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
+    <div class="tweet-logos">
+      <div class="round">
+        <span style="color: hsl(223, 87%, 63%);">
+          <i class="fa-brands fa-facebook color"></i>
+        </span>
+      </div>
+      <div class="round">
+        <span style="color: hsl(223, 87%, 63%);">
+          <i class="fa-brands fa-twitter color"></i>
+        </span>
+      </div>
+      <div class="round">
+        <span style="color: hsl(223, 87%, 63%);">
+          <i class="fa-brands fa-instagram color"></i>
+        </span>
+      </div>
+    </div>
+    <p class="footer__copy">&copy; Copyright Ping. All rights reserved.</p>
   </footer>
+  <script src="./javascript.js"></script>
 </body>
 </html>
