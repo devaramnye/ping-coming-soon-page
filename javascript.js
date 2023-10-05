@@ -11,8 +11,10 @@ email.addEventListener("input", (event) => {
 });
 
 form.addEventListener("submit", (event) => {
-  if (!email.validity.valid) {
+  if (email.validity.valueMissing) {
     event.preventDefault();
     emailError.textContent = "Whoops! It looks like you forgot to add your email";
+  } else if (!email.validity.valid) {
+    event.preventDefault();
   }
 });
